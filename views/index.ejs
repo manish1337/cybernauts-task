@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>TEST</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <style>
+    .container {
+      position: relative;
+    }
+
+    .text-box {
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      height: 40%;
+      width: 90%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      right: 10%;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="h-100" style="background-color: #Edecf4;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block container">
+                <img src="https://moaracrochet.com/wp-content/uploads/2020/01/Can-Crochet-on-an-airplane-2020-Moara-Crochet.jpg" alt="Sample photo" class="img-fluid h-100 rounded image" />
+                <div class="text-box">
+                  <h1>Altitude Air</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="card-body p-md-5 text-black">
+
+                  <div class="d-flex justify-content-end pt-3 p-4">
+                    <button type="button" class="btn btn-outline-primary" data-mdb-ripple-color="dark">Sign in</button>
+                  </div>
+
+                  <h3 class="text-uppercase mt-3 text-primary">Explore & Experience</h3>
+                  <p class="mb-5 text-primary">Get onto your most comfortable journey yet. All the way up.</p>
+
+                  <form action="/signup" method="post">
+
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input type="text" name="firstname" class="form-control form-control-lg" placeholder="First Name" required />
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input type="text" name="lastname" class="form-control form-control-lg" placeholder="Last Name" required />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input type="email" name="email" class="form-control form-control-lg" placeholder="Email" required />
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input type="text" name="username" class="form-control form-control-lg" placeholder="Username" required />
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input type="password" name="password" minlength="8" class="form-control form-control-lg" onChange="onChange()" placeholder="Password" required />
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input type="password" name="confirm" minlength="8" class="form-control form-control-lg" onChange="onChange()" placeholder="Confirm Password" required />
+                    </div>
+
+                    <div class="d-grid gap-2">
+                      <button type="submit" class="btn btn-primary">Get Started</button>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript">
+    function onChange() {
+      const password = document.querySelector('input[name=password]');
+      const confirm = document.querySelector('input[name=confirm]');
+      if (confirm.value == password.value) {
+        confirm.setCustomValidity('');
+      } else {
+        confirm.setCustomValidity('Passwords do not match');
+      }
+    }
+  </script>
+</body>
+
+</html>
